@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reaction diffusion</title>
+	<style>
+		body {
+			font-family:arial;
+			display:flex;
+			height: 633px;
+			align-items: center;
+			justify-content: center;
+		}
+		#canvas {
+			width: 633px; 
+			height: 633px; 
+			/*image-rendering: pixelated;*/
+		}
+
+		.container {
+			height: 100%;
+			margin-left:8px; 
+			width: 100%;
+		}
+		.slider {
+		  -webkit-appearance: none;
+		  width:100%;
+		  height: 25px;
+		  background: #d3d3d3;
+		  outline: none;
+		  opacity: 0.7;
+		  -webkit-transition: .2s;
+		  transition: opacity .2s;
+		  margin-bottom:8px;
+		}
+		.slider:hover {
+		  opacity: 1;
+		}
+		.slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  appearance: none;
+		  width: 25px;
+		  height: 25px;
+		  background: #04AA6D;
+		  cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="2532" height="2532"></canvas>
+	<div class="container">
+		<div class="text" id="feed-text">feed</div>
+		<input type="range" min="10" max="100" value="55" class="slider" id="feed" onchange="feed.value=this.value/1000">
+		<div class="text" id="kill-text">kill</div>
+		<input type="range" min="45" max="70" value="62" class="slider" id="kill" onchange="kill.value=this.value/1000">
+	<div class="container">
+
+	<script src="https://r105.threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
