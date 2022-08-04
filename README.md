@@ -1,5 +1,3 @@
 # Reaction-Diffusion-WebGL
 
-download and run main.html to see
-
-the simulation is computed using shaders
+to run go here: https://loganabel.github.io/Reaction-Diffusion-WebGL/main.html
